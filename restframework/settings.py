@@ -25,10 +25,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 
 
 
-ALLOWED_HOSTS = ['e-library104.herokuapp.com']
+ALLOWED_HOSTS = ['elibrary104.herokuapp.com']
 
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
 
 # Application definition
 
@@ -140,3 +138,4 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     )
 }
+django_heroku.settings(locals())
